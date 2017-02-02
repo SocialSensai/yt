@@ -45,6 +45,8 @@ module Yt
       # @!attribute [r] updated_at
       #   @return [String] the top level comment's last updated time.
       delegate :updated_at, to: :top_level_comment
+
+      has_many :comments
     end
   end
 end

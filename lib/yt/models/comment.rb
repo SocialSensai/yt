@@ -16,6 +16,8 @@ module Yt
       #   @return [String] the display name of the user who posted the comment.
       delegate :author_display_name, to: :snippet
 
+      delegate :author_channel_id, to: :snippet
+
       # @!attribute [r] text_display
       #   @return [String] the comment's text.
       delegate :text_display, to: :snippet

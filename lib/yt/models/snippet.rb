@@ -34,6 +34,7 @@ module Yt
       has_attribute :video_id
       has_attribute :total_reply_count, type: Integer
       has_attribute :author_display_name
+      has_attribute(:author_channel_id) { |hash| hash['value'] }
       has_attribute :text_display
       has_attribute :parent_id
       has_attribute :like_count, type: Integer
