@@ -11,7 +11,7 @@ module Yt
         @data = options[:data]['channel'].merge options[:data]['image']
       end
 
-      has_attiribute :unsubscribed_trailer
+      has_attribute :unsubscribed_trailer
 
     end
   end
