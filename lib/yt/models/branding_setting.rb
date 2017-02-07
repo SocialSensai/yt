@@ -8,7 +8,11 @@ module Yt
     # @see https://developers.google.com/youtube/v3/docs/channels#contentOwnerDetails
     class BrandingSetting < Base
       def initialize(options = {})
-        @data = options[:data]['channel'].merge options[:data]['image']
+        if options[:data].is_a?(Hash)
+          @data = options[:data]['channel'].merge options[:data]['image']
+        else
+          @data = {}
+        end
       end
 
       has_attribute :unsubscribed_trailer
